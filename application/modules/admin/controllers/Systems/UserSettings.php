@@ -70,6 +70,43 @@
 
     	}
 
+    	public function edit_user() {
+    		$id = $this->uri->segment('4');
+    		$user = $this->tbluser->get_user_by_id($id);
+    		$this -> data['user'] = $user;
+    		// echo "<pre>";
+	     //    print_r($this -> data);
+	     //    echo "</pre>";
+	     //    die;
+	        $roles = $this->mstrole->getalldata();
+        	$this->data['roles'] = $roles;
+    		$this -> parser->parse("accounts/edit_user.tpl",$this->data);
+
+    		if($this->input->post('btn_add_user')) {
+	            $add['user_firstname'] = $this->input->post('user_firstname');
+	            $add['user_lastname']  = $this->input->post('user_lastname');
+	            $add['user_type']      = $this->input->post('user_type');
+	            $add['user_phone']     = $this->input->post('user_phone');
+	            $add['role_id']        = $this->input->post('user_role');
+
+	            $image_info = $this->upload_img();
+	            if($image_info) {
+	            	$add['user_image'] = $image_info['file_name'];
+	            } else {
+	            	$add['user_image'] = $this -> data['user'][0]['user_image'];
+	            }
+
+	         //    echo "<pre>";
+	         //    	echo $this -> data['user'][0]['user_image'];
+	        	// 	print_r($add);
+	        	// echo "</pre>";
+	        	// die;
+                if ($this->tbluser->updateUser($add, $id)) {
+                	 redirect(base_url().'admin/accounts');
+                };
+                $this->data['success_notice'] = true;
+	        }
+    	}
 		function hashpassword($password) {
 	        return md5($password);
 	    }

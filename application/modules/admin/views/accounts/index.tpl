@@ -35,10 +35,10 @@
 	                <td>{$user['active']}</td>
 	                <td>{$user['role_id']}</td>   
 	                <td>
-	                	<a href='{php} echo base_url();{/php}admin/accounts/delete/{$user['user_id']}' class="remove btn btn-xs btn-danger">
+	                	<a href="{php} echo base_url();{/php}admin/accounts/delete/{$user['user_id']}" class="remove btn btn-xs btn-danger">
 	                		<i class="fa fa-trash-o"></i>
 	                	</a>
-	                	<a href='#' class="edit btn btn-xs btn-primary">
+	                	<a href='{php} echo base_url();{/php}admin/accounts/edit/{$user['user_id']}' class="edit btn btn-xs btn-primary">
 	                		<i class="fa fa-edit"></i>
 	                	</a>
 	                </td>           

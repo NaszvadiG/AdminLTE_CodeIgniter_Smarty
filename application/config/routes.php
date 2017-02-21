@@ -51,7 +51,8 @@ $route['example'] = "admin/Example";
 $route['admin/dashboard'] = "admin/Dashboard";
 $route['admin/accounts'] = "admin/Systems/UserSettings";
 $route['admin/accounts/new'] = "admin/Systems/UserSettings/add_user";
-$route['admin/accounts/delete/:num'] = "admin/Systems/UserSettings/delete_user/$1";
+$route['admin/accounts/delete/:num'] = "admin/Systems/UserSettings/delete_user";
+$route['admin/accounts/edit/:num'] = "admin/Systems/UserSettings/edit_user";
 
 //end admin
 

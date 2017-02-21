@@ -58,6 +58,10 @@ Class TblUser extends CI_Model {
 
     //--- Cap nhat user
     function updateUser($data,$id){
+        // echo "<pre>";
+        //  print_r($data);
+        // echo "</pre>";
+        // die;
         $this->db->where("user_id",$id);
         if($this->db->update($this->_table,$data))
             return TRUE;
@@ -83,6 +87,13 @@ Class TblUser extends CI_Model {
         $this->db->insert( $this->_table , $data );
         $insert_id = $this->db->insert_id();
         return $insert_id;
+    }
+
+    function get_user_by_id ($id){
+        $this->db->where("user_id",$id);
+        $query = $this->db->get("users");
+        $data = $query->result_array();
+        return $data;
     }
 
 }
