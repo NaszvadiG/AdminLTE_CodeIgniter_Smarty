@@ -8,4 +8,4 @@ Open Source PHP Framework (originally from EllisLab)
 # Add smarty template into codeigniter
 http://imasters.com.br/linguagens/php/trabalhando-com-framework-codeigniter-hmvc-template-smarty-e-doctrine-orm/?trace=1519021197&source=single
 
-Demo learning CodeIgniter in Co-well-asia HienTQ 
+#Demo learning CodeIgniter in Co-well-asia HienTQ 
