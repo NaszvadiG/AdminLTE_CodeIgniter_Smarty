@@ -9,7 +9,7 @@ Class TblUser extends CI_Model {
     //Lay toan bo du lieu//
     function getalldata(){
 
-        $this->db->select('user_id, user_firstname, user_lastname, user_phone, user_email, user_type,active,role_id');
+        $this->db->select('user_id, user_firstname, user_lastname, user_phone, user_email, user_image, user_type,active,role_id');
         $this->db->order_by("user_id","asc");
         $query = $this->db->get("users");
         $data = $query->result_array();

@@ -17,6 +17,7 @@
 		                <th>Phone</th>
 		                <th>Email</th>
 		              	<th>Type</th>
+		              	<th>Image</th>
 		              	<th>Active</th>
 		              	<th>Role</th>
 		              	<th>Action</th>
@@ -32,6 +33,9 @@
 	                <td>{$user['user_phone']}</td> 
 	                <td>{$user['user_email']}</td>
 	                <td>{$user['user_type']}</td>
+	                <td>
+	                	<img src="{php} echo base_url();{/php}upload/users/images/{$user['user_image']}"  alt='image' class='img-responsive' width='50'>
+	                </td>
 	                <td>{$user['active']}</td>
 	                <td>{$user['role_id']}</td>   
 	                <td>
@@ -64,8 +68,10 @@
 				{ data: "user_phone"  , name:'user_phone'	, className:'dt-center editable' },
 				{ data: "user_email"  , name:'user_email'	, className:'dt-center editable' },
 				{ data: "user_type", name:'user_type'	, className:'dt-center editable' },
+				{ data: "user_image"  , name:'user_image'	, className:'dt-center' },
 				{ data: "active"  , name:'active'	, className:'dt-center' },
-				{ data: "role_id", name:'role_id'	, className:'dt-center' }
+				{ data: "role_id", name:'role_id'	, className:'dt-center' },
+				{ data: "action"  , name:'action'	, className:'dt-center' },
 		   ],
 		   select:  true,
 		   aoColumnDefs: [
@@ -77,7 +83,7 @@
 	            		$searchBox.addClass('form-control input-sm');
 	            		$searchBox.attr("placeholder", "Type here to search");
 	            		$('.dataTables_filter label').get(0).firstChild.nodeValue = "";
-	            		$('.dataTables_filter').addClass('col-sm-6');
+	            		$('.dataTables_filter').addClass('col-sm-10');
 				  	},
 			dom: 'Bfrtip',
 			lengthChange: false,
