@@ -1,9 +1,11 @@
 # CodeIgniter 2
 Open Source PHP Framework (originally from EllisLab)
 
-For more info, please refer to the user-guide at http://www.codeigniter.com/userguide2/  
-(also available within the download package for offline use)
+# Add HMVC into codeigniter
+- download HMVC plugin in https://github.com/jenssegers/CodeIgniter-HMVC-Modules
+- unzip hmvc and cop 2 folder into application
+- Create folder modules in application, create MVC in modules
+# Add smarty template into codeigniter
+http://imasters.com.br/linguagens/php/trabalhando-com-framework-codeigniter-hmvc-template-smarty-e-doctrine-orm/?trace=1519021197&source=single
 
-**WARNING:** *CodeIgniter 2.x is no longer under development and only receives security patches until October 31st, 2015.
-Please update your installation to the latest CodeIgniter 3.x version available
-(upgrade instructions [here](http://www.codeigniter.com/userguide3/installation/upgrade_300.html)).*
+Demo learning CodeIgniter in Co-well-asia HienTQ 
