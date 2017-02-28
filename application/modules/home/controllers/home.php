@@ -9,7 +9,9 @@
 		public function index(){
 			echo "hello";
 		}
-		
+		public function show(){
+			echo "show";
+		}
 		public function user(){
 			$data['author'] = "HienTQ";
 			$this->load->view('home_template', $data);

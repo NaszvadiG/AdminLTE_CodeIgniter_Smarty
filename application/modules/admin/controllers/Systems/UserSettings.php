@@ -21,7 +21,9 @@
 	  //       die;
 			$this->parser->parse("accounts/index.tpl",$this -> data);
 		}
-		
+		public function show(){
+			echo 'show';
+		}
 		public function add_user() {
 		$this->data['success_notice'] = "";
 
